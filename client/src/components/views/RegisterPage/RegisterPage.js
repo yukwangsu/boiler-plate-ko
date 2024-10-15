@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Auth from "../../../hoc/auth";
 
 function RegisterPage(props) {
   const [Name, setName] = useState("");
@@ -83,4 +84,4 @@ function RegisterPage(props) {
   );
 }
 
-export default RegisterPage;
+export default Auth(RegisterPage, false);

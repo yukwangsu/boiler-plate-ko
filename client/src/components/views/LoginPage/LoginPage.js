@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Auth from "../../../hoc/auth";
+// import { withRouter } from "react-router-dom";
 
 function LoginPage(props) {
   const [Email, setEmail] = useState("");
@@ -63,4 +65,4 @@ function LoginPage(props) {
   );
 }
 
-export default LoginPage;
+export default Auth(LoginPage, false);
